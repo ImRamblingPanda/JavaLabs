@@ -10,8 +10,9 @@ public class task_2{
 		System.out.println(equal(3, 4, 3));
 		System.out.println(reverse("Edabit is really helpful!"));
 		System.out.println(programmers(147, 33, 526));
+		System.out.println(getXO("ooXxm"));
 		System.out.println(sameAscii("AA", "B@"));
-		System.out.println();
+		System.out.println(boomb("Hey, did you think there is a BOMB?"));
 		System.out.println();
 	}
 	public static int oppositeHouse(int houseNum, int n) {
@@ -57,6 +58,22 @@ public class task_2{
 	public static int programmers(int fPay, int sPay, int tPay) {
 		return 0;
 	}
+	public static boolean getXO(String s) {
+		int xCount = 0;
+		int oCount = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if ((s.charAt(i) == 'x')||(s.charAt(i) == 'X')) {
+				xCount =+ 1;
+			}
+		}
+		for (int i = 0; i < s.length(); i++) {
+			if ((s.charAt(i) == 'o')||(s.charAt(i) == 'O')) {
+				oCount =+ 1;
+			}
+		}
+		if (xCount == oCount) return true;
+		else return false;
+	}
 	public static boolean sameAscii( String first, String second) {
 		int firstAscii = 0;
 		int secondAscii = 0;
@@ -71,4 +88,11 @@ public class task_2{
 		}
 		else return false;
 		}
+	public static String boomb(String s) {
+		s = s.toLowerCase();
+		if (s.indexOf("boomb") == -1) {
+			return "DUCK!";
+		}
+		else return "Relax, there's no bomb.";
+	}
 	}
