@@ -4,9 +4,9 @@ import java.io.IOException;
 public class task_1{
 	public static void main(String[] args) throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//		String a = reader.readLine();
-//		String b = reader.readLine();
-//		String c = reader.readLine();
+		String a = reader.readLine();
+		String b = reader.readLine();
+		String c = reader.readLine();
 //		double num_1 = Double.parseDouble(a);
 //		double num_2 = Double.parseDouble(b);
 //		double num_3 = Double.parseDouble(c);
