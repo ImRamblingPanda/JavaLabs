@@ -1,13 +1,12 @@
 import java.io.IOException;
-
 public class task_2{
 	public static void main(String[] args) throws IOException {
-		System.out.println(oppositeHouse(5, 46));
+		System.out.println(oppositeHouse(1, 3));
 		System.out.println(nameShuffle("Rosie O'Donnell"));
 		System.out.println(discount(1500, 50));
 		int[] mass = {44, 32, 86, 19};
 		System.out.println(differeceMinMax(mass));
-		System.out.println(equal(3, 4, 3));
+		System.out.println(equal(1, 0, 0));
 		System.out.println(reverse("Edabit is really helpful!"));
 		System.out.println(programmers(147, 33, 526));
 		System.out.println(getXO("ooXxm"));
@@ -16,7 +15,7 @@ public class task_2{
 		System.out.println();
 	}
 	public static int oppositeHouse(int houseNum, int n) {
-		return 2*n-(houseNum-1);
+		return 2*n-(houseNum-1); 
 	}
 	public static String nameShuffle(String name) {
 		String reverseName = "";
@@ -46,7 +45,13 @@ public class task_2{
 		return mass[mass.length-1]-mass[0];		
 	}
 	public static int equal(int a, int b, int c) {
-		return 0;
+		if (a == b && b == c) {
+			return 3;
+		}
+		else if (a == b || b == c || a == c) {
+			return 2;
+		}
+		else return 0;
 	}
 	public static String reverse (String string) {
 	    String reverseString = "";
@@ -56,7 +61,13 @@ public class task_2{
 	    return reverseString;
 	}
 	public static int programmers(int fPay, int sPay, int tPay) {
-		return 0;
+		int max = fPay;
+		if (max < sPay) max = tPay;
+		else if (max < tPay) max = tPay;
+		int min = fPay;
+		if (min > sPay) min = sPay;
+		else if (min > tPay) min = tPay;
+		return max-min;
 	}
 	public static boolean getXO(String s) {
 		int xCount = 0;
